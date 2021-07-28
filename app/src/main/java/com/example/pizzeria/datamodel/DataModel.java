@@ -5,9 +5,9 @@ import java.util.List;
 
 public class DataModel {
 
-    public static List<OrderInfo> getOrderList(){
+    public static ArrayList<OrderInfo> getOrderList(){
 
-        List<OrderInfo> orders = new ArrayList<>();
+        ArrayList<OrderInfo> orders = new ArrayList<>();
         OrderInfo info = new OrderInfo();
         info.setAmount(20);
         info.setOrderDate("21/06/2021");
