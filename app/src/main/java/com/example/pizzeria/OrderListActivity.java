@@ -48,5 +48,6 @@ public class OrderListActivity extends AppCompatActivity implements OrderListAda
     public void onClickItem(OrderInfo info) {
         // sends the user to Order detail activity
 
+
     }
 }

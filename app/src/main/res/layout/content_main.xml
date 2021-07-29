@@ -1,42 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ll_home_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="100"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:background="@color/white"
+    android:padding="5dp"
+    android:weightSum="100">
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="40"
         android:layout_gravity="center"
         android:layout_margin="20dp"
+        android:layout_weight="40"
         android:background="@drawable/ic_baseline_local_pizza_24"
-        android:padding="5dp"/>
+        android:padding="5dp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_build_pizza"
-        android:drawableTop="@drawable/ic_baseline_local_pizza_24"
         android:layout_width="wrap_content"
-        android:text="BUILD PIZZA"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="20dp"
         android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:layout_weight="30"
-        android:padding="25dp"/>
+        android:backgroundTint="#07FFFFFF"
+        android:drawableTop="@drawable/ic_baseline_local_pizza_24"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="25dp"
+        android:textColor="@color/primary_color"
+        android:text="BUILD PIZZA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_your_orders"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:drawableTop="@drawable/ic_baseline_reorder_24"
         android:layout_width="wrap_content"
-        android:layout_margin="20dp"
         android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:layout_weight="30"
+        android:backgroundTint="#08FFFFFF"
+        android:textColor="@color/primary_color"
+        android:drawableTop="@drawable/ic_baseline_reorder_24"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="25dp"
         android:text="YOUR ORDERS"
-        android:padding="25dp"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
 </LinearLayout>

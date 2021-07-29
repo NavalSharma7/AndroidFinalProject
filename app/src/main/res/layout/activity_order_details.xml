@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OrderDetailsActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_local_pizza_24"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_cheese_heading"
+        android:text="Choose your Cheese"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:id="@+id/rg_cheese"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/rb_no_cheese"
+            android:text="No cheese"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/rb_mozzarella"
+            android:text="Mozzarella"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/rb_Parmesan"
+            android:text="Parmesan"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/rb_cheddar"
+            android:text="Cheddar"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    </LinearLayout>
+</ScrollView>

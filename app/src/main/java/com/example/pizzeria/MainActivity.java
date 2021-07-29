@@ -3,6 +3,7 @@ package com.example.pizzeria;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.pizzeria.datamodel.BuildPizzaActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -57,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         pizzaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // call the order detail activity
+                Intent intent = new Intent(MainActivity.this, BuildPizzaActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         ordersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // call the order list activity
                 Intent intent = new Intent(MainActivity.this, OrderListActivity.class);
                 startActivity(intent);
             }

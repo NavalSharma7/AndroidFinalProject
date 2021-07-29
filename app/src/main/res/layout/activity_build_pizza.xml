@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/sv_choose"
+        android:layout_above="@id/ll_amount"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_baseline_local_pizza_24" />
+
+            <TextView
+                android:id="@+id/tv_bread_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:text="Choose your Bread"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_bread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_thin_crust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thin Crust"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_thick_crust"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Thick Crust" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_sauce_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:text="Choose your Sauce"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_sauce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_bbq"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="BBQ" />
+
+                <RadioButton
+                    android:id="@+id/rb_creamy_garlic"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Creamy Garlic" />
+
+                <RadioButton
+                    android:id="@+id/rb_pesto"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Pesto" />
+
+                <RadioButton
+                    android:id="@+id/rb_italian_tomato"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Italian Tomato" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_cheese_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:gravity="left"
+                android:text="Choose your Cheese"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_cheese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_no_cheese"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No cheese" />
+
+                <RadioButton
+                    android:id="@+id/rb_mozzarella"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Mozzarella" />
+
+                <RadioButton
+                    android:id="@+id/rb_Parmesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Parmesan" />
+
+                <RadioButton
+                    android:id="@+id/rb_cheddar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Cheddar" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_topping_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:gravity="left"
+                android:text="Choose your Toppings"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_toppings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_chicken"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken" />
+
+                <RadioButton
+                    android:id="@+id/rb_beef"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Beef" />
+
+                <RadioButton
+                    android:id="@+id/rb_pepperoni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Pepperonni" />
+
+                <RadioButton
+                    android:id="@+id/rb_onion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Onion" />
+                <RadioButton
+                    android:id="@+id/rb_mushroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Mushroom" />
+                <RadioButton
+                    android:id="@+id/rb_jellapeno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Jellapeno" />
+                <RadioButton
+                    android:id="@+id/rb_capsicum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Capsicum" />
+                <RadioButton
+                    android:id="@+id/rb_tomato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Tomato" />
+                <RadioButton
+                    android:id="@+id/rb_extra_cheese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Extra Cheese" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/btn_order"
+        android:orientation="vertical"
+        android:id="@+id/ll_amount"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="start|center"
+            android:gravity="start|center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Amount"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_amount"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="end|center"
+            android:gravity="end|center"
+            android:text="20$"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_order"
+        android:text="ORDER"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:background="@color/primary_color"
+        />
+
+</RelativeLayout>
