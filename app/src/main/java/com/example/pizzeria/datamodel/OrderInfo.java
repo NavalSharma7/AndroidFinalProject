@@ -6,6 +6,7 @@ public class OrderInfo {
 
     private BreadEnum breadEnum;
     private CheeseEnum cheeseEnum;
+    private BaseSauceEnum sauceEnum;
     private List<String> toppings;
     private String orderDate;
     private int orderId;
@@ -22,6 +23,14 @@ public class OrderInfo {
 
     public CheeseEnum getCheeseEnum() {
         return cheeseEnum;
+    }
+
+    public BaseSauceEnum getSauceEnum() {
+        return sauceEnum;
+    }
+
+    public void setSauceEnum(BaseSauceEnum sauceEnum) {
+        this.sauceEnum = sauceEnum;
     }
 
     public void setCheeseEnum(CheeseEnum cheeseEnum) {

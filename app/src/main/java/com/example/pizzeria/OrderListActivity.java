@@ -10,8 +10,9 @@ import com.example.pizzeria.datamodel.DataModel;
 import com.example.pizzeria.datamodel.OrderInfo;
 
 public class OrderListActivity extends AppCompatActivity implements OrderListAdapter.
-        clickItemInterface,
-        OrderListAdapter.delteItemInterface {
+        clickItemListener,
+        OrderListAdapter.deleteListener {
+    // global adapter variable as the view would be needed to updated from diffrent functions.
     private OrderListAdapter mAdapter;
 
 
@@ -23,14 +24,13 @@ public class OrderListActivity extends AppCompatActivity implements OrderListAda
     }
 
     private void init() {
-        RecyclerView orderListView = new RecyclerView(getApplicationContext());
-        // set the layout manager
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(getApplicationContext());
-        orderListView.setLayoutManager(manager);
-
+        RecyclerView orderListView = new RecyclerView(this);
+        orderListView = findViewById(R.id.rv_order_list);
         //set the adapter
-        mAdapter = new OrderListAdapter(getBaseContext(), DataModel.getOrderList());
+        mAdapter = new OrderListAdapter(this, DataModel.getOrderList());
+
         orderListView.setAdapter(mAdapter);
+        // mAdapter.setOrderList(DataModel.getOrderList());
         mAdapter.notifyDataSetChanged();
 
     }
@@ -39,7 +39,9 @@ public class OrderListActivity extends AppCompatActivity implements OrderListAda
 
     @Override
     public void onClickDelete(OrderInfo info) {
-        // dete the item from memory
+        //match id and delete the item from memory
+
+        // delete the item from recycler view and refresh..
     }
 
     @Override

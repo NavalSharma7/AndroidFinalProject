@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_home_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="40"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_baseline_local_pizza_24"
+        android:padding="5dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_build_pizza"
+        android:drawableTop="@drawable/ic_baseline_local_pizza_24"
+        android:layout_width="wrap_content"
+        android:text="BUILD PIZZA"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:padding="25dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_your_orders"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_baseline_reorder_24"
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:text="YOUR ORDERS"
+        android:padding="25dp"/>
+
+</LinearLayout>

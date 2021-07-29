@@ -1,21 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="5dp">
-    <TextView
-        android:id="@+id/txt_name"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view_adapter_item"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="7dp"
+    android:background="@color/white"
+    android:layout_margin="5dp"
+    android:layout_centerHorizontal="true">
+
+    <LinearLayout
+        android:id="@+id/rl_item_order_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="5dp"/>
-    <TextView
-        android:id="@+id/txt_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:padding="5dp"/>
-</LinearLayout>
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_topping"
+            android:layout_weight="35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_choice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="choice1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_choice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="choice1"
+                android:textColor="@color/black"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_choice3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="choice1"
+                android:textColor="@color/black"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_choice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="choice1"
+                android:textColor="@color/black"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:text="24$"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_margin="1dp"
+                android:layout_alignParentRight="true"
+                android:text="choice1"
+                android:textColor="@color/black"
+                android:padding="2dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_date"
+                android:layout_below="@+id/tv_date"
+                android:layout_alignLeft="@+id/tv_date"
+                android:id="@+id/ib_delete"
+                android:padding="5dp"
+                android:background="@drawable/ic_delete_foreground"/>
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_right_foreground"
+            android:layout_gravity="right|center_vertical"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
