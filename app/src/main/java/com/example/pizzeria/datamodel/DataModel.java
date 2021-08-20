@@ -10,11 +10,11 @@ public class DataModel {
         ArrayList<OrderInfo> orders = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             OrderInfo info = new OrderInfo();
-            info.setAmount(20);
+
             info.setOrderDate("21/06/2021");
-            info.setBreadEnum(BreadEnum.THICK_CRUST);
-            info.setCheeseEnum(CheeseEnum.CHEDDAR);
-            info.setSauceEnum(BaseSauceEnum.BBQ);
+            info.setBreadEnum(BreadEnum.THICK_CRUST.getDisplayName());
+            info.setCheeseEnum(CheeseEnum.CHEDDAR.getDisplayName());
+            info.setSauceEnum(BaseSauceEnum.BBQ.getDisplayName());
             List<String> toppings = new ArrayList<>();
             toppings.add("peperoni");
             toppings.add("extra cheese");

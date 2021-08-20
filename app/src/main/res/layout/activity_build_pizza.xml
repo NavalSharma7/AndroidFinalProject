@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:id="@+id/sv_choose"
-        android:layout_above="@id/ll_amount"
+        android:layout_above="@id/btn_order"
         android:layout_alignParentTop="true"
         android:layout_height="wrap_content">
 
@@ -31,7 +31,7 @@
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
                 android:gravity="left"
-                android:text="Choose your Bread"
+                android:text="@string/choose_your_bread"
                 android:textColor="@color/black"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -45,14 +45,15 @@
                     android:id="@+id/rb_Regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Regular"
+                    android:text="@string/regular"
+                    android:checked="true"
                     android:textColor="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/rb_thin_crust"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thin Crust"
+                    android:text="@string/thin_crust"
                     android:textColor="@color/black"/>
 
                 <RadioButton
@@ -60,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Thick Crust" />
+                    android:text="@string/thick_crust" />
 
             </RadioGroup>
 
@@ -72,7 +73,7 @@
                 android:layout_margin="10dp"
                 android:gravity="left"
                 android:textColor="@color/black"
-                android:text="Choose your Sauce"
+                android:text="@string/choose_your_sauce"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
@@ -85,29 +86,30 @@
                     android:id="@+id/rb_bbq"
                     android:layout_width="match_parent"
                     android:textColor="@color/black"
+                    android:checked="true"
                     android:layout_height="wrap_content"
-                    android:text="BBQ" />
+                    android:text="@string/bbq" />
 
                 <RadioButton
                     android:id="@+id/rb_creamy_garlic"
                     android:layout_width="match_parent"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Creamy Garlic" />
+                    android:text="@string/creamy_garlic" />
 
                 <RadioButton
                     android:id="@+id/rb_pesto"
                     android:layout_width="match_parent"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Pesto" />
+                    android:text="@string/pesto" />
 
                 <RadioButton
                     android:id="@+id/rb_italian_tomato"
                     android:layout_width="match_parent"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Italian Tomato" />
+                    android:text="@string/italian_tomato" />
             </RadioGroup>
 
             <TextView
@@ -118,7 +120,7 @@
                 android:layout_margin="10dp"
                 android:textColor="@color/black"
                 android:gravity="left"
-                android:text="Choose your Cheese"
+                android:text="@string/choose_your_cheese"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
@@ -130,30 +132,31 @@
                 <RadioButton
                     android:id="@+id/rb_no_cheese"
                     android:textColor="@color/black"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="No cheese" />
+                    android:text="@string/no_cheese" />
 
                 <RadioButton
                     android:id="@+id/rb_mozzarella"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Mozzarella" />
+                    android:text="@string/mozzarella" />
 
                 <RadioButton
                     android:id="@+id/rb_Parmesan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Parmesan" />
+                    android:text="@string/parmesan" />
 
                 <RadioButton
                     android:id="@+id/rb_cheddar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Cheddar" />
+                    android:text="@string/cheddar" />
             </RadioGroup>
 
             <TextView
@@ -164,104 +167,76 @@
                 android:layout_margin="10dp"
                 android:textColor="@color/black"
                 android:gravity="left"
-                android:text="Choose your Toppings"
+                android:text="@string/choose_your_toppings"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/rg_toppings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<!--            <RadioGroup-->
+<!--                android:id="@+id/rg_toppings"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
                 <RadioButton
                     android:id="@+id/rb_chicken"
                     android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Chicken" />
+                    android:text="@string/chicken" />
 
                 <RadioButton
                     android:id="@+id/rb_beef"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Beef" />
+                    android:text="@string/beef" />
 
                 <RadioButton
                     android:id="@+id/rb_pepperoni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Pepperonni" />
+                    android:text="@string/pepperoni" />
 
                 <RadioButton
                     android:id="@+id/rb_onion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Onion" />
+                    android:text="@string/onion" />
                 <RadioButton
                     android:id="@+id/rb_mushroom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Mushroom" />
+                    android:text="@string/mushroom" />
                 <RadioButton
                     android:id="@+id/rb_jellapeno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Jellapeno" />
+                    android:text="@string/jellapeno" />
                 <RadioButton
                     android:id="@+id/rb_capsicum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Capsicum" />
+                    android:text="@string/capsicum" />
                 <RadioButton
                     android:id="@+id/rb_tomato"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Tomato" />
+                    android:text="@string/tomato" />
                 <RadioButton
                     android:id="@+id/rb_extra_cheese"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Extra Cheese" />
-            </RadioGroup>
+                    android:text="@string/extra_cheese" />
+<!--            </RadioGroup>-->
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_above="@+id/btn_order"
-        android:orientation="vertical"
-        android:id="@+id/ll_amount"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_gravity="start|center"
-            android:gravity="start|center"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="Amount"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_amount"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:layout_gravity="end|center"
-            android:gravity="end|center"
-            android:text="20$"/>
-    </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

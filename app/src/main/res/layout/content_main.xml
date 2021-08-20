@@ -31,7 +31,7 @@
         android:gravity="center"
         android:padding="25dp"
         android:textColor="@color/primary_color"
-        android:text="BUILD PIZZA"
+        android:text="@string/build_pizza"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -47,7 +47,7 @@
         android:elevation="5dp"
         android:gravity="center"
         android:padding="25dp"
-        android:text="YOUR ORDERS"
+        android:text="@string/your_orders"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
 </LinearLayout>

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PIzzeria">
-        <activity android:name=".datamodel.BuildPizzaActivity"></activity>
+        <activity android:name=".BuildPizzaActivity"></activity>
         <activity android:name=".OrderListActivity" />
         <activity android:name=".OrderDetailsActivity" />
         <activity

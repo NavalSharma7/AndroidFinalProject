@@ -15,38 +15,40 @@ import com.example.pizzeria.datamodel.OrderInfo;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class OrderListAdapter extends RecyclerView.Adapter<OrderListAdapter.OrderViewHolder> {
 
     private Context mContext;
     //order list
-    private ArrayList<OrderInfo> mOrderList;
-    private  deleteListener mDeleteListener;
-    private clickItemListener mCLickListener;
+    private List<OrderInfo> mOrderList;
 
-    //interface to interact with main activity..
-    public interface deleteListener {
-        void onClickDelete(OrderInfo info);
+    private clickItemListener mCLickListener;
+    private deleteListener mDeleteListener;
+
+    public Context getContext() {
+        return this.mContext;
     }
 
-    ;
+    //interface to interact with main activity..
 
     public interface clickItemListener {
         void onClickItem(OrderInfo info);
     }
 
-
-
+    public interface deleteListener {
+        void onDeleteItem(OrderInfo info);
+    }
 
     //constructor
 
-    public OrderListAdapter(Context mContext, ArrayList<OrderInfo> mOrderList) {
+    public OrderListAdapter(Context mContext, clickItemListener clickItemListener, deleteListener deleteListener) {
         this.mContext = mContext;
-        this.mOrderList = mOrderList;
+        this.mCLickListener = clickItemListener;
+        this.mDeleteListener = deleteListener;
         notifyDataSetChanged();
     }
-
 
 
     @Override
@@ -69,26 +71,18 @@ public class OrderListAdapter extends RecyclerView.Adapter<OrderListAdapter.Orde
             @Override
             public void onClick(View v) {
                 // call interface method for item view click
-                mCLickListener.onClickItem(info);
+                if (mCLickListener != null)
+                    mCLickListener.onClickItem(info);
             }
         });
 
-        // click listener for delete button from a order item view
-        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // call interface method for delete item click
-                mDeleteListener.onClickDelete(info);
-            }
-        });
-    // set the values to he view of each item from each orderinfo item
-        holder.choice1.setText(info.getBreadEnum().getDisplayName());
-        holder.choice2.setText(info.getCheeseEnum().getDisplayName());
-        holder.choice3.setText(info.getSauceEnum().getDisplayName());
-        holder.choice4.setText(info.getToppings().get(0));
-        double amount =info.getAmount();
-        DecimalFormat precision = new DecimalFormat("0.00");
-        holder.amountView.setText(String.format("$ %s",precision.format(amount)));
+
+        // set the values to he view of each item from each orderinfo item
+        holder.choice1.setText(info.getBreadEnum());
+        holder.choice2.setText(info.getCheeseEnum());
+        holder.choice3.setText(info.getSauceEnum());
+        if (info.getToppings() != null)
+            holder.choice4.setText(info.getToppings().get(0));
         holder.dateView.setText(info.getOrderDate());
 
     }
@@ -113,16 +107,26 @@ public class OrderListAdapter extends RecyclerView.Adapter<OrderListAdapter.Orde
             choice2 = itemView.findViewById(R.id.tv_choice2);
             choice3 = itemView.findViewById(R.id.tv_choice3);
             choice4 = itemView.findViewById(R.id.tv_choice4);
-            amountView = itemView.findViewById(R.id.tv_amount);
             dateView = itemView.findViewById(R.id.tv_date);
-            deleteButton = itemView.findViewById(R.id.ib_delete);
 
 
         }
     }
 
-    public void setOrderList(ArrayList<OrderInfo> orderList){
-        this.mOrderList=orderList;
+    public void setOrderList(List<OrderInfo> orderList) {
+        this.mOrderList = orderList;
         notifyDataSetChanged();
     }
+
+    // public methods
+    public void deleteItem(int position) {
+        if (mDeleteListener != null)
+            mDeleteListener.onDeleteItem(mOrderList.get(position));
+//        mOrderList.remove(position);
+//        notifyItemRemoved(position);
+
+
+    }
+
+
 }

@@ -7,11 +7,17 @@ public enum BreadEnum {
 
     BreadEnum(String name) {
         this.displayName = name;
+
     }
 
     private String displayName;
+    private int breadID;
 
     public String getDisplayName() {
         return displayName;
+    }
+
+    public int getBreadID() {
+        return breadID;
     }
 }
