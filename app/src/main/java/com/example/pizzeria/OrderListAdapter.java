@@ -81,7 +81,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<OrderListAdapter.Orde
         holder.choice1.setText(info.getBreadEnum());
         holder.choice2.setText(info.getCheeseEnum());
         holder.choice3.setText(info.getSauceEnum());
-        if (info.getToppings() != null)
+        if (info.getToppings() != null && info.getToppings().size()>0)
             holder.choice4.setText(info.getToppings().get(0));
         holder.dateView.setText(info.getOrderDate());
 

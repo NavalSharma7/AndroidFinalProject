@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:id="@+id/iv_logo_details"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_baseline_local_pizza_24" />
+            android:background="@drawable/ic_flatbread" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_edit"
+                style="@style/CustomButton"
                 android:layout_weight="20"
                 android:text="@string/edit" />
         </LinearLayout>
@@ -39,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_reorder"
+            style="@style/CustomButton"
             android:layout_alignParentBottom="true"
             android:text="@string/reorder"/>
     </RelativeLayout>

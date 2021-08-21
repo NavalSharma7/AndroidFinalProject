@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".OrderDetailsActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
         android:id="@+id/sv_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/btn_order"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content">
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,19 +22,18 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_baseline_local_pizza_24" />
+                android:background="@drawable/ic_header_2"
+                android:scaleType="fitXY" />
 
             <TextView
                 android:id="@+id/tv_bread_heading"
+                style="@style/LargeBlackFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
                 android:gravity="left"
-                android:text="@string/choose_your_bread"
-                android:textColor="@color/black"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+                android:text="@string/choose_your_bread" />
 
             <RadioGroup
                 android:id="@+id/rg_bread"
@@ -43,23 +42,23 @@
 
                 <RadioButton
                     android:id="@+id/rb_Regular"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/regular"
                     android:checked="true"
-                    android:textColor="@color/black"/>
+                    android:text="@string/regular" />
 
                 <RadioButton
                     android:id="@+id/rb_thin_crust"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/thin_crust"
-                    android:textColor="@color/black"/>
+                    android:text="@string/thin_crust" />
 
                 <RadioButton
                     android:id="@+id/rb_thick_crust"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/thick_crust" />
 
@@ -67,15 +66,14 @@
 
             <TextView
                 android:id="@+id/tv_sauce_heading"
+                style="@style/LargeBlackFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
+
                 android:gravity="left"
-                android:textColor="@color/black"
-                android:text="@string/choose_your_sauce"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+                android:text="@string/choose_your_sauce" />
 
             <RadioGroup
                 android:id="@+id/rg_sauce"
@@ -84,45 +82,44 @@
 
                 <RadioButton
                     android:id="@+id/rb_bbq"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
-                    android:checked="true"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/bbq" />
 
                 <RadioButton
                     android:id="@+id/rb_creamy_garlic"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/creamy_garlic" />
 
                 <RadioButton
                     android:id="@+id/rb_pesto"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/pesto" />
 
                 <RadioButton
                     android:id="@+id/rb_italian_tomato"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/italian_tomato" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/tv_cheese_heading"
+                style="@style/LargeBlackFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
+
                 android:layout_margin="10dp"
-                android:textColor="@color/black"
                 android:gravity="left"
-                android:text="@string/choose_your_cheese"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+                android:text="@string/choose_your_cheese" />
 
             <RadioGroup
                 android:id="@+id/rg_cheese"
@@ -131,120 +128,121 @@
 
                 <RadioButton
                     android:id="@+id/rb_no_cheese"
-                    android:textColor="@color/black"
-                    android:checked="true"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/no_cheese" />
 
                 <RadioButton
                     android:id="@+id/rb_mozzarella"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:text="@string/mozzarella" />
 
                 <RadioButton
                     android:id="@+id/rb_Parmesan"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:text="@string/parmesan" />
 
                 <RadioButton
                     android:id="@+id/rb_cheddar"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:text="@string/cheddar" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/tv_topping_heading"
+                style="@style/LargeBlackFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
-                android:textColor="@color/black"
                 android:gravity="left"
-                android:text="@string/choose_your_toppings"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+                android:text="@string/choose_your_toppings" />
 
-<!--            <RadioGroup-->
-<!--                android:id="@+id/rg_toppings"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
+            <!--            <RadioGroup-->
+            <!--                android:id="@+id/rg_toppings"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content">-->
 
-                <RadioButton
-                    android:id="@+id/rb_chicken"
-                    android:textColor="@color/black"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/chicken" />
+            <RadioButton
+                android:id="@+id/rb_chicken"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chicken" />
 
-                <RadioButton
-                    android:id="@+id/rb_beef"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/beef" />
+            <RadioButton
+                android:id="@+id/rb_beef"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/beef" />
 
-                <RadioButton
-                    android:id="@+id/rb_pepperoni"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/pepperoni" />
+            <RadioButton
+                android:id="@+id/rb_pepperoni"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pepperoni" />
 
-                <RadioButton
-                    android:id="@+id/rb_onion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/onion" />
-                <RadioButton
-                    android:id="@+id/rb_mushroom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/mushroom" />
-                <RadioButton
-                    android:id="@+id/rb_jellapeno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/jellapeno" />
-                <RadioButton
-                    android:id="@+id/rb_capsicum"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/capsicum" />
-                <RadioButton
-                    android:id="@+id/rb_tomato"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/tomato" />
-                <RadioButton
-                    android:id="@+id/rb_extra_cheese"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="@string/extra_cheese" />
-<!--            </RadioGroup>-->
+            <RadioButton
+                android:id="@+id/rb_onion"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/onion" />
+
+            <RadioButton
+                android:id="@+id/rb_mushroom"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mushroom" />
+
+            <RadioButton
+                android:id="@+id/rb_jellapeno"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jellapeno" />
+
+            <RadioButton
+                android:id="@+id/rb_capsicum"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/capsicum" />
+
+            <RadioButton
+                android:id="@+id/rb_tomato"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tomato" />
+
+            <RadioButton
+                android:id="@+id/rb_extra_cheese"
+                style="@style/RadioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/extra_cheese" />
+            <!--            </RadioGroup>-->
         </LinearLayout>
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_order"
+        style="@style/CustomButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_order"
-        android:text="ORDER"
         android:layout_alignParentBottom="true"
-        android:textColor="@color/white"
-        android:background="@color/primary_color"
-        />
+        android:text="@string/order" />
 
 </RelativeLayout>

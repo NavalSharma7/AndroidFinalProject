@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    style="@style/background"
     android:padding="5dp"
     android:weightSum="100">
 
@@ -15,12 +15,12 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_weight="40"
-        android:background="@drawable/ic_baseline_local_pizza_24"
+        android:background="@drawable/ic_pizza_header"
         android:padding="5dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_build_pizza"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
@@ -36,7 +36,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_your_orders"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"

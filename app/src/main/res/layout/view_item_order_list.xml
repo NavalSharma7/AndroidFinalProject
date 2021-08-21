@@ -6,9 +6,7 @@
     android:id="@+id/parent_view_adapter_item"
     app:cardCornerRadius="7dp"
     app:cardElevation="7dp"
-    android:backgroundTint="@color/white"
-    android:background="@color/white"
-    app:cardBackgroundColor="@color/white"
+    style="@style/CardViewBackground"
     android:layout_margin="5dp"
     android:layout_centerHorizontal="true">
 

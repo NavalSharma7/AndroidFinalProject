@@ -5,6 +5,8 @@ import java.util.List;
 
 public class DataModel {
 
+    // a class fpr dummy data for testing
+
     public static ArrayList<OrderInfo> getOrderList() {
 
         ArrayList<OrderInfo> orders = new ArrayList<>();

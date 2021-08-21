@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.pizzeria.datamodel.DataModel;
 import com.example.pizzeria.datamodel.OrderInfo;
@@ -20,7 +21,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderListActivity extends AppCompatActivity  {
+public class OrderListActivity extends AppCompatActivity {
     // global adapter variable as the view would be needed to updated from diffrent functions.
     private OrderListAdapter mAdapter;
     private List<OrderInfo> mOrders;
@@ -61,7 +62,7 @@ public class OrderListActivity extends AppCompatActivity  {
             public void onClickItem(OrderInfo info) {
                 // go to the Order details activity with orderInfo
 
-                Intent intent = new Intent(OrderListActivity.this, OrderDetailsActivity .class);
+                Intent intent = new Intent(OrderListActivity.this, OrderDetailsActivity.class);
 
                 intent.putExtra("order_details", info);
                 startActivity(intent);
@@ -86,8 +87,9 @@ public class OrderListActivity extends AppCompatActivity  {
         mAdapter.setOrderList(mOrders);
         mAdapter.notifyDataSetChanged();
 
-    }
+        showDeleteFeatureToast();
 
+    }
 
 
     // shared preferences methods
@@ -146,30 +148,9 @@ public class OrderListActivity extends AppCompatActivity  {
         editor.apply();
 
     }
-
-    private void clearData() {
-
-        // get the default list from data model and change the list as it will remove any ctsom added dices
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-
-
-        // getting data from gson and storing it in a string.
-        String json = gson.toJson(mOrders);
-
-        // below line is to save data in shared
-        // prefs in the form of string.
-        editor.putString("orders", json);
-
-        // below line is to apply changes
-        // and save data in shared prefs.
-        editor.apply();
+    private void showDeleteFeatureToast(){
+        Toast.makeText(this, "Swipe to delete orders",
+                Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-    }
 }

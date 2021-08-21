@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
+
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -91,33 +91,33 @@ public class BuildPizzaActivity extends AppCompatActivity {
     private void setInfoValues(OrderInfo info) {
         String bread = info.getBreadEnum();
 
-        if (bread.equals(BreadEnum.REGULAR.getDisplayName())) {
+        if (bread.equalsIgnoreCase(BreadEnum.REGULAR.getDisplayName())) {
             breadGroup.check(R.id.rb_Regular);
-        } else if (bread.equals(BreadEnum.THICK_CRUST.getDisplayName())) {
+        } else if (bread.equalsIgnoreCase(BreadEnum.THICK_CRUST.getDisplayName())) {
             breadGroup.check(R.id.rb_thick_crust);
-        } else if (bread.equals(BreadEnum.THIN_CRUST.getDisplayName())) {
+        } else if (bread.equalsIgnoreCase(BreadEnum.THIN_CRUST.getDisplayName())) {
             breadGroup.check(R.id.rb_thin_crust);
         }
 
         String cheese = info.getCheeseEnum();
-        if (cheese.equals(CheeseEnum.CHEDDAR.getDisplayName())) {
+        if (cheese.equalsIgnoreCase(CheeseEnum.CHEDDAR.getDisplayName())) {
             cheeseGroup.check(R.id.rb_cheddar);
-        } else if (cheese.equals(CheeseEnum.PARMESAN.getDisplayName())) {
+        } else if (cheese.equalsIgnoreCase(CheeseEnum.PARMESAN.getDisplayName())) {
             cheeseGroup.check(R.id.rb_Parmesan);
-        } else if (cheese.equals(CheeseEnum.NO_CHEESE.getDisplayName())) {
+        } else if (cheese.equalsIgnoreCase(CheeseEnum.NO_CHEESE.getDisplayName())) {
             cheeseGroup.check(R.id.rb_no_cheese);
-        } else if (cheese.equals(CheeseEnum.MOZZARELLA.getDisplayName())) {
+        } else if (cheese.equalsIgnoreCase(CheeseEnum.MOZZARELLA.getDisplayName())) {
             cheeseGroup.check(R.id.rb_mozzarella);
         }
 
         String sauce = info.getSauceEnum();
-        if (sauce.equals(BaseSauceEnum.BBQ.getDisplayName())) {
+        if (sauce.equalsIgnoreCase(BaseSauceEnum.BBQ.getDisplayName())) {
             cheeseGroup.check(R.id.rb_bbq);
-        } else if (sauce.equals(BaseSauceEnum.CREAMY_GARLIC.getDisplayName())) {
+        } else if (sauce.equalsIgnoreCase(BaseSauceEnum.CREAMY_GARLIC.getDisplayName())) {
             cheeseGroup.check(R.id.rb_creamy_garlic);
-        } else if (sauce.equals(BaseSauceEnum.ITALIAN_TOMATO.getDisplayName())) {
+        } else if (sauce.equalsIgnoreCase(BaseSauceEnum.ITALIAN_TOMATO.getDisplayName())) {
             cheeseGroup.check(R.id.rb_italian_tomato);
-        } else if (sauce.equals(BaseSauceEnum.PESTO.getDisplayName())) {
+        } else if (sauce.equalsIgnoreCase(BaseSauceEnum.PESTO.getDisplayName())) {
             cheeseGroup.check(R.id.rb_pesto);
         }
 
@@ -126,23 +126,23 @@ public class BuildPizzaActivity extends AppCompatActivity {
         if (toppings.isEmpty())
             return;
         for (String topping : toppings) {
-            if (topping.equals("Chicken"))
+            if (topping.equalsIgnoreCase("Chicken"))
                 chickenBtn.setChecked(true);
-            else if (topping.equals("Beef"))
+            else if (topping.equalsIgnoreCase("Beef"))
                 beefBtn.setChecked(true);
-            else if (topping.equals("Pepperoni"))
+            else if (topping.equalsIgnoreCase("Pepperoni"))
                 pepperoniBtn.setChecked(true);
-            else if (topping.equals("Capsicum"))
+            else if (topping.equalsIgnoreCase("Capsicum"))
                 capsicumBtn.setChecked(true);
-            else if (topping.equals("Extra Cheese"))
+            else if (topping.equalsIgnoreCase("Extra Cheese"))
                 extraCheeseBtn.setChecked(true);
-            else if (topping.equals("Tomato"))
+            else if (topping.equalsIgnoreCase("Tomato"))
                 tomatoBtn.setChecked(true);
-            else if (topping.equals("Onion"))
+            else if (topping.equalsIgnoreCase("Onion"))
                 onionBtn.setChecked(true);
-            else if (topping.equals("Jellapeno"))
+            else if (topping.equalsIgnoreCase("Jellapeno"))
                 jalapenoBtn.setChecked(true);
-            else if (topping.equals("Mushroom"))
+            else if (topping.equalsIgnoreCase("Mushroom"))
                 mushroomBtn.setChecked(true);
         }
 

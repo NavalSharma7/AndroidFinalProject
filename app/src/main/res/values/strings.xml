@@ -22,7 +22,7 @@
     <string name="pesto">Pesto</string>
     <string name="italian_tomato">Italian Tomato</string>
     <string name="choose_your_cheese">Choose your Cheese</string>
-    <string name="no_cheese">No cheese</string>
+    <string name="no_cheese">No Cheese</string>
     <string name="mozzarella">Mozzarella</string>
     <string name="parmesan">Parmesan</string>
     <string name="cheddar">Cheddar</string>
@@ -36,6 +36,7 @@
     <string name="tomato">Tomato</string>
     <string name="extra_cheese">Extra Cheese</string>
     <string name="amount">Amount</string>
-    <string name="edit">edit</string>
+    <string name="edit">Edit</string>
     <string name="reorder">Reorder</string>
+    <string name="order">ORDER</string>
 </resources>
